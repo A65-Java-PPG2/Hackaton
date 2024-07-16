@@ -5,6 +5,7 @@ public class ArrayHelpers {
 
     public static int[] add(int[] source, int element) {
         System.out.println("Niki");
+        System.out.println("Emo");
         return new int[1];
     }
 
