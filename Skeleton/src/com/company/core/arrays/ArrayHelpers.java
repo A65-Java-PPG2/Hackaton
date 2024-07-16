@@ -4,6 +4,7 @@ package com.company.core.arrays;
 public class ArrayHelpers {
 
     public static int[] add(int[] source, int element) {
+        System.out.println("Niki");
         return new int[1];
     }
 
