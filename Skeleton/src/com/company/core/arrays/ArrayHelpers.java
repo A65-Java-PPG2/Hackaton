@@ -3,33 +3,99 @@ package Skeleton.src.com.company.core.arrays;
 @SuppressWarnings({"ManualArrayCopy", "ExplicitArrayFilling"})
 public class ArrayHelpers {
 
+    /**
+     * Adds `element` to the end of `source`.
+     *
+     * @param source  The array to add to
+     * @param element The element to add
+     * @return A new array, the original array with `element` at the end
+     * @author Nikolay Voynov
+     */
     public static int[] add(int[] source, int element) {
-        System.out.println("Niki");
-        System.out.println("Emo");
-        return new int[1];
+        int increasedLength = source.length + 1;
+        int[] newArr = new int[increasedLength];
+
+        copy(source, newArr, increasedLength);
+        newArr[increasedLength - 1] = element;
+
+        return newArr;
     }
 
-    // Nikolay Voynov
-
+    /**
+     * Adds `element` at the start of `source`.
+     *
+     * @param source  The array to add to
+     * @param element The element to add
+     * @return A new array, the original array with `element` at head position
+     * @author Nikolay Voynov
+     */
     public static int[] addFirst(int[] source, int element) {
-        return new int[1];
-    }
-    // Nikolay Voynov
+        int increasedLength = source.length + 1;
+        int[] newArr = new int[increasedLength];
 
+        copyFrom(source, 0, newArr, 1, source.length);
+        newArr[0] = element;
+
+        return newArr;
+    }
+
+    /**
+     * Adds all `elements` to the end of `source`.
+     *
+     * @param source  The array to add to
+     * @param elements The elements to add
+     * @return A new array, the original array with all `elements` at the end
+     * @author Nikolay Voynov
+     */
     public static int[] addAll(int[] source, int... elements) {
-        return new int[1];
-    }
-    // Nikolay Voynov
+        int increasedLength = source.length + elements.length;
 
+        int[] newArr = new int[increasedLength];
+
+        copy(source, newArr, source.length);
+        int index = 0;
+        for (int i = source.length; i < newArr.length; i++) {
+            newArr[i] = elements[index];
+            index++;
+        }
+
+        return newArr;
+    }
+
+    /**
+     * Checks if `source` contains `element`.
+     *
+     * @param source  The array to check in
+     * @param element The elements to check for
+     * @return `true` if `source` contains `element`, otherwise, `false`
+     * @author Nikolay Voynov
+     */
     public static boolean contains(int[] source, int element) {
+        for (int i = 0; i < source.length; i++) {
+            if (source[i] == element) {
+                return true;
+            }
+        }
+
         return false;
     }
-    // Nikolay Voynov
 
+    /**
+     * Copies `count` elements from `sourceArray` into `destinationArray`
+     *
+     * @param sourceArray      The array to copy from
+     * @param destinationArray The array to copy to
+     * @param count            The number of elements to copy
+     * @return `void`
+     * @author Nikolay Voynov
+     */
     public static void copy(int[] sourceArray, int[] destinationArray, int count) {
+        int minLengthCopyArr = Math.min(sourceArray.length, count);
 
+        for (int i = 0; i < minLengthCopyArr; i++) {
+            destinationArray[i] = sourceArray[i];
+        }
     }
-    // Nikolay Voynov
 
     public static void copyFrom(int[] sourceArray, int sourceStartIndex,
                                 int[] destinationArray, int destStartIndex, int count) {
@@ -65,6 +131,7 @@ public class ArrayHelpers {
     public static int[] removeAllOccurrences(int[] source, int element) {
         return new int[1];
     }
+
     // Ismail Emin
     public static void reverse(int[] arrayToReverse) {
     }

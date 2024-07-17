@@ -1,5 +1,6 @@
-package com.company.core.arrays;
+package Skeleton.tests.com.company.core.arrays;
 
+import Skeleton.src.com.company.core.arrays.ArrayHelpers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

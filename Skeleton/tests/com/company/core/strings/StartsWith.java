@@ -1,5 +1,6 @@
-package com.company.core.strings;
+package Skeleton.tests.com.company.core.strings;
 
+import Skeleton.src.com.company.core.strings.StringHelpers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
