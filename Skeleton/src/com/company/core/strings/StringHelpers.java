@@ -1,4 +1,4 @@
-package Skeleton.src.com.company.core.strings;
+package com.company.core.strings;
 
 @SuppressWarnings("StringConcatenationInLoop")
 public class StringHelpers {

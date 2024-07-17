@@ -1,4 +1,4 @@
-package Skeleton.src.com.company.core.arrays;
+package com.company.core.arrays;
 
 @SuppressWarnings({"ManualArrayCopy", "ExplicitArrayFilling"})
 public class ArrayHelpers {
